@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25-sec Memes</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family:'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: top;
+      min-height: 100%;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    h1,h4{
+      margin-top: 5px;
+    }
+    h4 {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+    h1, .img_container {
+      margin-bottom: 5px;
+    }
+    .img_container img {
+      width: 400px;
+      height: 350px;
+      object-position: center;
+    }
+    .blink {
+      animation: blinker 3s linear infinite;
+      color: yellow;
+      font-family: sans-serif;
+    }
+    @keyframes blinker {
+      50% {
+          color: red;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Here is your meme will refresh in 25sec</h1>
+  <h4>refreshes in <span class="blink" id="countdown"></span> sec</h4>
+  <p class="img_container"><img src="{{meme_pic}}"></img></p>
+  <p>Current subreddit: {{subreddit}}</p>
+  <script>
+    window.setInterval('refresh()', 25 * 1000); 	// Calls function every 25sec
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
+  var timeleft = 25;
+  var downloadTimer = setInterval(function(){ 
+    if(timeleft <= 0){
+      clearInterval(downloadTimer);
+      document.getElementById("countdown").innerHTML = "Finished";
+    } else {
+      document.getElementById("countdown").innerHTML = timeleft;
+    }
+    timeleft -= 1;
+  }, 1000);
+</script>
+</body>
+</html>
