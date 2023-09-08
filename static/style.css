@@ -1,0 +1,139 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Rubik Iso', cursive;
+    
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    border-bottom: 1px solid white;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 10rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blink {
+    animation: blinker 3s linear infinite;
+    color: yellow;
+    font-family: sans-serif;
+  }
+  @keyframes blinker {
+    50% {
+        color: red;
+    }
+  }
+
+
+
+nav li {
+    margin-inline: 2rem;
+    list-style: none;
+    border: 3px solid black;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+nav li:hover{
+    animation: bordermove 2s infinite;
+}
+
+@keyframes bordermove {
+    25% {border-color: green;}
+    50% {border-color: red;}
+    75% {border-color: blue;}
+    100% {border-color: orange}
+}
+
+.container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+    text-align: center;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.meme-img {
+    height: 450px;
+}
+
+.register-container,
+.login-container {
+    height: 450px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container a,
+.login-container a {
+    color: blue;
+}
+
+.reg-heading, .log-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+form {
+    padding: 5rem;
+    padding-top: 2rem;
+    border: 2px solid white;
+}
+
+.reg-btn,
+.log-btn {
+    color: white;
+    width: 5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    border: none;
+    background-color: red;
+    transition: background-color 0.5s;
+}
+
+.reg-btn:hover,
+.log-btn:hover {
+    background-color: green;
+}
+
+.rdct {
+    font-family: 'Courier New', Courier, monospace;
+}
+.rdct:hover {
+    color: purple;
+}

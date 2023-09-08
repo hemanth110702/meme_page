@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="user">
+    <h1>
+    {% if session['name'] %}
+    Welcome {{ session['name'] }}!!
+    {% else %}
+    Feel at home - you're welcome anytime.
+    {% endif %}</h1>
+    </div>
+    <div class="content">
+        <h2>Here is your meme will
+          refreshes in <span class="blink" id="countdown"></span> sec</h2>
+          <img class="meme-img" src="{{meme_pic}}">
+          <p>Current subreddit: {{subreddit}}</p>
+    </div>
+</div>
+
+{% endblock %}
