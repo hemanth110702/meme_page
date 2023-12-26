@@ -25,7 +25,7 @@
 - MySQL
 - HTML
 - CSS
-- Js
+- JS
 
 ## Getting Started
 
@@ -121,4 +121,4 @@
     </tr>
 </table>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">⬆️ Back to Top</a></p>
