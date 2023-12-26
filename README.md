@@ -2,6 +2,7 @@
 
 # MEME_PAGE
 
+<details>
 <summary>Table of contents</summary>
 
 -   [Overview](#overview)
@@ -119,3 +120,5 @@
         </td>
     </tr>
 </table>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
